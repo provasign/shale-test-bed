@@ -1,0 +1,55 @@
+shale_version: "0"
+id: 25f37dfc-8856-467a-aa78-79de349c5340
+created_at: 2026-06-10T12:54:03.262162Z
+finalized_at: 2026-06-10T12:54:03.843614Z
+agent:
+    tool: claude-code
+    model: claude-fable-5
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: feat/rate-limit-login
+privacy: redacted
+intent:
+    title: Add rate limiting to the login endpoint
+    body: Token bucket per client IP, 10 requests/min, in-memory. Return 429 with Retry-After. No external deps.
+    title_sha256: d97b384abc5e12787f48b5d97eee93d0c5b28c81300649bdbf270a7842ac265b
+    body_sha256: 0a20036596e71d67fd91a80cab88a9b22c329795d974ff002f302668cc933ac4
+    declared_at: 2026-06-10T12:54:03.329309Z
+    prompt_count: 1
+completion:
+    note: Token-bucket limiter with per-IP keying; 429 + Retry-After on excess. Unit tests cover exhaustion and refill.
+    model: claude-fable-5
+    tokens_in: 41000
+    tokens_out: 18500
+    tokens_total: 59500
+    cost_usd: 0.67
+    pricing_version: "2026-06-09"
+    iterations: 2
+transcript:
+    path: transcripts/25f37dfc-8856-467a-aa78-79de349c5340.md
+    sha256: b95fc42cbbcf96fc20d1ae2bfc5a02628481127343a82c3657fb7c0621042356
+    kind: prompts
+files:
+    - path: internal/ratelimit/ratelimit.go
+      ops:
+        - write
+      via: hook
+      first_touched: 2026-06-10T12:54:03.339825Z
+    - path: internal/ratelimit/ratelimit_test.go
+      ops:
+        - write
+      via: hook
+      first_touched: 2026-06-10T12:54:03.359793Z
+    - path: main.go
+      ops:
+        - edit
+      via: hook
+      first_touched: 2026-06-10T12:54:03.381881Z
+commands:
+    - cmd: go test ./...
+      exit_code: 0
+      at: 2026-06-10T12:54:03.401743Z
+      classified: test
+notes: []
+redactions: 1

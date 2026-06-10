@@ -9,11 +9,13 @@ import (
 	"os"
 
 	"github.com/provasign/shale-test-bed/internal/auth"
+	"github.com/provasign/shale-test-bed/internal/ratelimit"
 )
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("POST /login", handleLogin)
+	limiter := ratelimit.New(10) // 10 login attempts/min per IP
+	mux.HandleFunc("POST /login", limiter.Middleware(handleLogin))
 	mux.HandleFunc("GET /health", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		_, _ = w.Write([]byte("ok"))
