@@ -24,6 +24,8 @@ POST /login   {"user": "...", "password": "..."}
 `POST /login` checks credentials against a small in-memory user table in
 `internal/auth`. Failed login attempts are tracked in memory so account lockout
 behavior can be changed, tested, broken, and reviewed in pull requests.
+Passwords must be 12 to 128 characters long and include lowercase, uppercase,
+numeric, and special characters before they can authenticate.
 
 The service is not intended for production use. Passwords are stored in memory
 as plain test fixtures, state resets when the process restarts, and there is no
