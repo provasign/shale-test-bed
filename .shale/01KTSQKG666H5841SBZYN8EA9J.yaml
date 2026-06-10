@@ -1,0 +1,65 @@
+shale_version: "0"
+id: 01KTSQKG666H5841SBZYN8EA9J
+created_at: 2026-06-10T21:39:21.414683Z
+finalized_at: 2026-06-10T21:52:05.824006Z
+agent:
+    tool: ""
+    model: gpt-5-codex
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: Implement password policy checks
+    body: Add password length and character-composition validation to the auth path, update demo credentials to satisfy the policy, document the new requirements, and add tests.
+    title_sha256: b04d0bd4ffb0652631462e89b6b38e37f01fdc96b4840004e6246096faa5d2b7
+    body_sha256: 563cd20f0cd7278a8e13de58506841504410f7c9bea40599b94cc594306d9628
+    declared_at: 2026-06-10T21:44:14.468466Z
+completion:
+    note: Implemented password length and character policy checks, updated demo credentials and docs, added tests, and ignored the local Go cache used for sandboxed verification.
+    model: gpt-5-codex
+    iterations: 1
+files:
+    - path: .claude/settings.json
+      ops:
+        - edit
+      via: git
+    - path: .codex/hooks.json
+      ops:
+        - edit
+      via: git
+    - path: .cursor/hooks.json
+      ops:
+        - edit
+      via: git
+    - path: .cursorrules
+      ops:
+        - edit
+      via: git
+    - path: .github/copilot-instructions.md
+      ops:
+        - edit
+      via: git
+    - path: .github/hooks/shale.json
+      ops:
+        - edit
+      via: git
+    - path: .gitignore
+      ops:
+        - edit
+      via: git
+    - path: README.md
+      ops:
+        - edit
+      via: git
+    - path: internal/auth/auth.go
+      ops:
+        - edit
+      via: git
+    - path: internal/auth/auth_test.go
+      ops:
+        - edit
+      via: git
+notes: []
+redactions: 0
