@@ -7,7 +7,7 @@ card: full session evidence, coverage gaps, recorded check failures, and the
 no-evidence nudge.
 
 ```
-POST /login   {"user": "...", "password": "..."}
+POST /login   {"user": "...", "password": "..."}   # 423 after 5 failed attempts
 GET  /health
 ```
 
