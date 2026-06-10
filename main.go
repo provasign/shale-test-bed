@@ -11,12 +11,16 @@ import (
 	"github.com/provasign/shale-test-bed/internal/auth"
 )
 
+// version is stamped at build time via -ldflags.
+var version = "dev"
+
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /login", handleLogin)
 	mux.HandleFunc("GET /health", func(w http.ResponseWriter, _ *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write([]byte("ok"))
+		_, _ = w.Write([]byte(`{"status":"ok","version":"` + version + `"}`))
 	})
 
 	addr := ":8080"
