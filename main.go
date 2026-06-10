@@ -37,6 +37,10 @@ func handleLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if !auth.Check(req.User, req.Password) {
+		if auth.Locked(req.User) {
+			http.Error(w, "account locked", http.StatusLocked)
+			return
+		}
 		http.Error(w, "unauthorized", http.StatusUnauthorized)
 		return
 	}
