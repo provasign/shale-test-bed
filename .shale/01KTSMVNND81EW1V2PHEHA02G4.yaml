@@ -1,0 +1,29 @@
+shale_version: "0"
+id: 01KTSMVNND81EW1V2PHEHA02G4
+created_at: 2026-06-10T20:51:23.438452Z
+finalized_at: 2026-06-10T20:54:16.890989Z
+agent:
+    tool: ""
+    model: gpt-5-codex
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: Expand README documentation
+    body: Update README to explain the repo purpose as a Shale evidence test bed, identify the Go service surface area, and describe what counts as test evidence in the repository and pull requests. Keep changes documentation-only.
+    title_sha256: 491d68f7b7501dc22c84913cffa78e3e8c54430eafcf6b79ed00053563dadc51
+    body_sha256: 6c850851bdd72596f6e60d5286c1301febd3db48cc04bbd0a42056e9aa765800
+    declared_at: 2026-06-10T20:53:17.962596Z
+completion:
+    note: Expanded README with repo purpose, service behavior, local run/test commands, repository layout, and examples of Shale/test evidence. Documentation-only change; tests not run.
+    model: gpt-5-codex
+    iterations: 1
+files:
+    - path: README.md
+      ops:
+        - edit
+      via: git
+notes: []
+redactions: 0
