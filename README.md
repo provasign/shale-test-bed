@@ -96,3 +96,6 @@ shale done --note "what changed and any deviations"
 
 This keeps pull requests reviewable even when multiple agents or tools are used
 to produce a change.
+
+Small README-only updates are useful for confirming that the evidence hooks are
+recording agent intent and completion notes as expected.
