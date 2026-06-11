@@ -1,0 +1,79 @@
+shale_version: "0"
+id: 019eb41d-91c3-7cd3-bd3b-2e886be6c66d
+created_at: 2026-06-11T00:38:49.423824Z
+finalized_at: 2026-06-11T00:39:57.259679Z
+agent:
+    tool: codex
+    model: gpt-5.5
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: Update README and add two-line markdown file
+    body: User requested a README update and a new markdown file with 2 lines. Keep changes minimal and scoped.
+    title_sha256: ce7d4c49d4795d0adb3cbd90fcbde0d6769604fc90dd829fd92a8314e9aee212
+    body_sha256: 6d31e6a56b45d910686915fb105f8cf135e63f8ee78c59dc6049c54faac0f6f0
+    declared_at: 2026-06-11T00:38:57.424093Z
+    prompt_count: 2
+completion:
+    note: Updated README with a follow-up capture sentence and added capture-note.md with exactly two lines.
+    model: gpt-5
+    iterations: 1
+files:
+    - path: README.md
+      ops:
+        - edit
+      via: hook
+      first_touched: 2026-06-11T00:39:03.877608Z
+    - path: capture-note.md
+      ops:
+        - write
+      via: hook
+      first_touched: 2026-06-11T00:39:03.877608Z
+commands:
+    - cmd: pwd
+      at: 2026-06-11T00:38:54.224406Z
+      classified: other
+    - cmd: rg --files
+      at: 2026-06-11T00:38:54.238289Z
+      classified: other
+    - cmd: shale intent "Update README and add two-line markdown file" --body "User requested a README update and a new markdown file with 2 lines. Keep changes minimal and scoped."
+      at: 2026-06-11T00:38:57.460622Z
+      classified: other
+    - cmd: sed -n '1,160p' README.md
+      at: 2026-06-11T00:39:00.222151Z
+      classified: other
+    - cmd: git diff -- README.md capture-note.md
+      at: 2026-06-11T00:39:07.60646Z
+      classified: other
+    - cmd: wc -l capture-note.md
+      at: 2026-06-11T00:39:07.643709Z
+      classified: other
+    - cmd: shale done --note "Updated README with a follow-up capture sentence and added capture-note.md with exactly two lines." --model gpt-5 --iterations 1
+      at: 2026-06-11T00:39:13.777827Z
+      classified: other
+    - cmd: git status --short
+      at: 2026-06-11T00:39:25.233467Z
+      classified: other
+    - cmd: git status --short --branch
+      at: 2026-06-11T00:39:43.920101Z
+      classified: other
+    - cmd: git diff -- README.md capture-note.md
+      at: 2026-06-11T00:39:43.922735Z
+      classified: other
+    - cmd: git add README.md capture-note.md
+      at: 2026-06-11T00:39:47.089341Z
+      classified: other
+    - cmd: git diff --cached --stat
+      at: 2026-06-11T00:39:51.131493Z
+      classified: other
+    - cmd: git diff --cached -- README.md capture-note.md
+      at: 2026-06-11T00:39:51.148292Z
+      classified: other
+    - cmd: 'git commit -m "docs: update capture evidence notes"'
+      at: 2026-06-11T00:39:54.44873Z
+      classified: other
+notes: []
+redactions: 0
