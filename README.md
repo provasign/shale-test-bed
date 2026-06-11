@@ -99,3 +99,4 @@ to produce a change.
 
 Small README-only updates are useful for confirming that the evidence hooks are
 recording agent intent and completion notes as expected.
+This follow-up README update exercises capture behavior for another doc change.
