@@ -1,0 +1,27 @@
+shale_version: "0"
+id: 88185d6c-3301-4ce5-8d94-466b199da936
+created_at: 2026-06-12T15:41:25.489862Z
+finalized_at: 2026-06-12T15:41:25.570045Z
+agent:
+    tool: claude-code
+    model: claude-fable-5
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: 'Multi-agent smoke: claude finishes, codex left pending'
+    title_sha256: aa3bd16cf2f8070885221aad78abb6957da1a89a801adafb0645bbb821dd2646
+    declared_at: 2026-06-12T15:41:25.51315Z
+completion:
+    note: 'Multi-agent smoke complete: this done should also sweep the pending codex session'
+    model: claude-fable-5
+files:
+    - path: CHANGELOG.md
+      ops:
+        - edit
+      via: hook
+      first_touched: 2026-06-12T15:41:25.521453Z
+notes: []
+redactions: 0
