@@ -6,3 +6,5 @@
 - v0.1.24 finalize-on-done verification
 
 - codex smoke entry
+
+- claude smoke entry
