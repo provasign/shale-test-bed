@@ -1,0 +1,27 @@
+shale_version: "0"
+id: 182343a5-6d8d-4bc6-b4da-de2317aaf5be
+created_at: 2026-06-12T15:26:26.047047Z
+finalized_at: 2026-06-12T15:26:26.140115Z
+agent:
+    tool: claude-code
+    model: claude-fable-5
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: Verify finalize-on-done publishes without a shale pre-push hook
+    title_sha256: f077ce82493c21249385d094d5b7a04beed36d2b38b76ea71973a389ce11fc95
+    declared_at: 2026-06-12T15:26:26.075708Z
+completion:
+    note: 'Done-flow verified: evidence must commit here, before any push, with no shale hook installed'
+    model: claude-fable-5
+files:
+    - path: CHANGELOG.md
+      ops:
+        - edit
+      via: hook
+      first_touched: 2026-06-12T15:26:26.085632Z
+notes: []
+redactions: 0
