@@ -1,0 +1,53 @@
+shale_version: "0"
+id: 720d6a8e-c305-4a2e-a7c5-343ac19395df
+created_at: 2026-06-12T14:10:10.106421Z
+finalized_at: 2026-06-12T14:12:23.542332Z
+agent:
+    tool: claude-code
+    model: claude-fable-5
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: Retire the legacy capture note and update docs
+    body: 'Task 2: capture-note.md is dead; fold its content into README, add a changelog.'
+    title_sha256: 4048ff144730fdc63c3792e428fdd8e253165c2e2b97d0117ea32bac6a7e818b
+    body_sha256: 6c614a37e9cb625c7dba8dac55116a81b0730212afc75bae028329e0e564a948
+    declared_at: 2026-06-12T14:11:29.429216Z
+    prompt_count: 1
+files:
+    - path: internal/parser/validate.go
+      ops:
+        - write
+      via: hook
+      first_touched: 2026-06-12T14:11:04.217757Z
+    - path: main.go
+      ops:
+        - edit
+      via: hook
+      first_touched: 2026-06-12T14:11:04.23508Z
+    - path: CHANGELOG.md
+      ops:
+        - write
+      via: git
+    - path: README.md
+      ops:
+        - edit
+      via: git
+    - path: capture-note.md
+      ops:
+        - delete
+      via: git
+commands:
+    - cmd: go build ./...
+      exit_code: 0
+      at: 2026-06-12T14:11:29.382245Z
+      classified: build
+notes:
+    - text: 'earlier task in this session — intent: Add input validation to the parser'
+      at: 2026-06-12T14:11:04.204077Z
+    - text: 'earlier task in this session — completed: Task 1 shipped: parser validation with size and empty checks'
+      at: 2026-06-12T14:11:29.413384Z
+redactions: 0
