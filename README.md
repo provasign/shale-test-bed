@@ -6,6 +6,8 @@ pull requests. Each PR in this repo exercises a different part of the Shale
 card: full session evidence, coverage gaps, recorded check failures, and the
 no-evidence nudge.
 
+Command capture cleanup check: v0.1.28.
+
 ```
 POST /login   {"user": "...", "password": "..."}
 GET  /health
