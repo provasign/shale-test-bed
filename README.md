@@ -4,6 +4,8 @@
 [Shale](https://github.com/provasign/shale), Provasign's agent evidence workflow,
 on real pull requests.
 
+Branch-sync evidence scoping check: v0.1.28.
+
 The application is intentionally simple: it gives agents and reviewers a
 real codebase with source files, tests, runtime behavior, and plausible defects,
 without the noise of a production service. Changes in this repository are meant
