@@ -10,4 +10,7 @@ jobs:
   card:
     runs-on: ubuntu-latest
     steps:
-      - uses: provasign/shale-action@v1   # no actions/checkout — everything via API
+      # SHA-pinned, not the mutable v1 tag: pull_request_target hands this
+      # action a write-capable token on FORK pull requests.
+      # v1 = 058e7e22496beb5d32214ec27e30ca043ce3a945
+      - uses: provasign/shale-action@058e7e22496beb5d32214ec27e30ca043ce3a945   # no actions/checkout — everything via API

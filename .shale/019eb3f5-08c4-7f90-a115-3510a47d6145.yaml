@@ -1,0 +1,71 @@
+shale_version: "0"
+id: 019eb3f5-08c4-7f90-a115-3510a47d6145
+created_at: 2026-06-10T23:54:18.731131Z
+finalized_at: 2026-06-10T23:57:07.084698Z
+agent:
+    tool: codex
+    model: gpt-5.5
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+intent:
+    title: Update README documentation for hook check
+    body: Make a small README-only change so Shale intent/done hooks can be exercised without touching service behavior.
+    title_sha256: af7c3f7dbaee1d2885fd46630b1f3f92c66bc38feb4e77211df840629f5e910d
+    body_sha256: 4dbcf14430250ad5b2954e4bf3d08fc415c7a2e7a3fa1646c0f59794823abfdf
+    declared_at: 2026-06-10T23:54:30.434253Z
+    prompt_count: 3
+completion:
+    note: Updated README with a small docs-only note for confirming Shale evidence hooks; no tests run because behavior was unchanged.
+files:
+    - path: README.md
+      ops:
+        - edit
+      via: git
+commands:
+    - cmd: pwd
+      at: 2026-06-10T23:54:24.0377Z
+      classified: other
+    - cmd: git status --short
+      at: 2026-06-10T23:54:24.043782Z
+      classified: other
+    - cmd: rg --files
+      at: 2026-06-10T23:54:24.045998Z
+      classified: other
+    - cmd: sed -n '1,120p' AGENTS.md
+      at: 2026-06-10T23:54:27.519266Z
+      classified: other
+    - cmd: sed -n '1,200p' README.md
+      at: 2026-06-10T23:54:27.519367Z
+      classified: other
+    - cmd: shale intent "Update README documentation for hook check" --body "Make a small README-only change so Shale intent/done hooks can be exercised without touching service behavior."
+      at: 2026-06-10T23:54:30.468044Z
+      classified: other
+    - cmd: git diff -- README.md
+      at: 2026-06-10T23:54:37.046917Z
+      classified: other
+    - cmd: git status --short
+      at: 2026-06-10T23:54:37.151002Z
+      classified: other
+    - cmd: shale done --note "Updated README with a small docs-only note for confirming Shale evidence hooks; no tests run because behavior was unchanged."
+      at: 2026-06-10T23:54:40.319024Z
+      classified: other
+    - cmd: git branch --show-current
+      at: 2026-06-10T23:55:05.27296Z
+      classified: other
+    - cmd: git status --short --branch
+      at: 2026-06-10T23:56:58.764599Z
+      classified: other
+    - cmd: git log --oneline --decorate -5
+      at: 2026-06-10T23:56:58.764589Z
+      classified: other
+    - cmd: git add README.md
+      at: 2026-06-10T23:57:02.355103Z
+      classified: other
+    - cmd: 'git commit -m "docs: note README hook checks"'
+      at: 2026-06-10T23:57:04.655154Z
+      classified: other
+notes: []
+redactions: 0

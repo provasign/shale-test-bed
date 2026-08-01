@@ -1,0 +1,20 @@
+shale_version: "0"
+id: codex-smoke-1
+created_at: 2026-06-12T15:41:25.423227Z
+finalized_at: 2026-06-12T15:41:25.570045Z
+agent:
+    tool: codex
+    model: gpt-5-codex
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+files:
+    - path: CHANGELOG.md
+      ops:
+        - edit
+      via: hook
+      first_touched: 2026-06-12T15:41:25.443403Z
+notes: []
+redactions: 0

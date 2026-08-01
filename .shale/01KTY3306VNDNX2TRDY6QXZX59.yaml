@@ -1,0 +1,15 @@
+shale_version: "0"
+id: 01KTY3306VNDNX2TRDY6QXZX59
+created_at: 2026-06-12T14:17:01.404166Z
+finalized_at: 2026-06-12T14:17:01.910229Z
+agent:
+    tool: ""
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: docs/readme-evidence
+privacy: redacted
+notes:
+    - text: v0.1.21 validation pass — checking pre-push transfer semantics
+      at: 2026-06-12T14:17:01.404166Z
+redactions: 0
