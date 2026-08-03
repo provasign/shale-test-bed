@@ -1,0 +1,29 @@
+shale_version: "0"
+id: 01KV1X0FZ2VK78YZNB0Y7GA6XN
+created_at: 2026-06-14T01:47:45.507004Z
+finalized_at: 2026-06-14T01:51:58.397491Z
+agent:
+    tool: ""
+    model: gpt-5-codex
+    adapter_version: 0.1.0
+repo:
+    root_hint: shale-test-bed
+    branch: test/v0-1-28-branch-sync-evidence
+privacy: redacted
+intent:
+    title: Verify branch-sync evidence scoping
+    body: Create a tiny test-bed PR against an evidence-heavy base branch to confirm Shale only renders evidence introduced by the PR.
+    title_sha256: 0fe99e4f43b9fa87ff56e8999bb3e6662aa3ea9fc2b5aef7b28271da2df83331
+    body_sha256: 9ebb58aa8d88f17e515cb1cbf3fc21e06f766bf24bfd7af9a3f836eeab23db06
+    declared_at: 2026-06-14T01:47:45.507004Z
+completion:
+    note: Added a one-line README marker to verify branch-sync evidence scoping against an evidence-heavy base branch. Tests passed with GOWORK=off go test ./....
+    model: gpt-5-codex
+    iterations: 1
+files:
+    - path: README.md
+      ops:
+        - edit
+      via: git
+notes: []
+redactions: 0
